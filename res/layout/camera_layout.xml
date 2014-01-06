@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.asiacom.capturecamera.CameraPreview
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+    <com.asiacom.capturecamera.CaptureView
+        android:id="@+id/captureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+         />
+	 <RelativeLayout
+        android:id="@+id/after_capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+         >
+
+        <Button
+            android:id="@+id/shutter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="拍照"
+             />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/shutter_button"
+            android:layout_alignBottom="@+id/shutter_button"
+            android:layout_toRightOf="@+id/shutter_button"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffffff"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:text="取消"
+             />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/shutter_button"
+            android:layout_alignBottom="@+id/shutter_button"
+            android:layout_toLeftOf="@+id/shutter_button"
+            android:layout_centerVertical="true"
+            android:text="保存"
+            android:textColor="#ffffffff"
+            android:visibility="gone"
+            android:padding="10dp"
+             />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:text="退出" />
+</RelativeLayout>
